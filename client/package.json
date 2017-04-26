@@ -1,0 +1,46 @@
+{
+  "name": "blogging_system",
+  "version": "1.0.0",
+  "description": "A blogging system by Elias Bernhaut",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpox/blog_system.git"
+  },
+  "keywords": [
+    "blog",
+    "blogging",
+    "website",
+    "web",
+    "react"
+  ],
+  "author": "Elias Bernhaut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alpox/blog_system/issues"
+  },
+  "homepage": "https://github.com/alpox/blog_system#readme",
+  "dependencies": {
+    "@types/react": "^15.0.23",
+    "@types/react-dom": "^15.5.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.68.2"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.13.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "express": "^4.15.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
+  }
+}
