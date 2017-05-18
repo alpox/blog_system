@@ -6,7 +6,7 @@ module.exports = {
         "react-hot-loader/patch",
         // activate HMR for React
 
-        "./src/index.tsx",
+        "./src/index.js",
     ],
     output: {
         path: path.join(__dirname, 'dist'),
@@ -18,8 +18,7 @@ module.exports = {
     devtool: "source-map",
 
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: [".webpack.js", ".web.js", ".js"]
     },
 
     plugins: [
@@ -29,21 +28,14 @@ module.exports = {
 
     module: {
         loaders: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            {
-                test: /\.tsx?$/,
+            { 
+                test: /\.jsx?$/, 
+                exclude: /node_modules/, 
                 loaders: [
                     "react-hot-loader/webpack",
-                    "awesome-typescript-loader"
-                ],
-                exclude: path.resolve(__dirname, 'node_modules'),
-                include: path.resolve(__dirname, "src"),
-            },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                loader: "source-map-loader"
+                    "babel-loader",
+                    "source-map-loader"
+                ]
             }
         ]
     },

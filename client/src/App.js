@@ -1,7 +1,8 @@
 import * as React from "react";
 
-export default class App extends React.Component<any, any> {
-    interval: number;
+export default class App extends React.Component {
+    interval;
+    
     constructor() {
         super();
         this.state = { count: 0 };
@@ -22,7 +23,7 @@ export default class App extends React.Component<any, any> {
         return (
             <div>
                 <h1>Hello World</h1>
-                <div>Welcome to hot-relo React written in TypeScript! {this.state.count}</div>
+                <div>Welcome to hot-reload React written in TypeScript! {this.state.count}</div>
             </div>
         );
     }

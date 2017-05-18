@@ -21,7 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.spec.ts'
+      'test/**/*.spec.js'
     ],
 
 
@@ -71,7 +71,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
-
-    mime: { 'text/x-typescript': ['ts','tsx'] }
   })
 }
