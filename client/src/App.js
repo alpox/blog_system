@@ -1,30 +1,16 @@
-import * as React from "react";
+import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import { appReducer } from "./reducer";
+import { increaseCounter } from "./actions";
+import { compose, lifecycle, setPropTypes } from "recompose";
+import { services } from "./feathersClient";
+import Login from './authentication/login';
+import Registration from './authentication/registration';
 
-export default class App extends React.Component {
-    interval;
-    
-    constructor() {
-        super();
-        this.state = { count: 0 };
-    }
+const App = ({counter, increase, users}) =>
+    <div>
+        <Registration />
+        <Login />
+    </div>
 
-    //This state will be maintained during hot reloads
-    componentWillMount() {
-        this.interval = setInterval(() => {
-            this.setState({ count: this.state.count + 1 })
-        }, 1000)
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Hello World</h1>
-                <div>Welcome to hot-reload React written in TypeScript! {this.state.count}</div>
-            </div>
-        );
-    }
-}
+export default App;

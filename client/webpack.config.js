@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: "bundle.js",
-        publicPath: "/dist/",
+        publicPath: "/dist/"
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -28,6 +28,21 @@ module.exports = {
 
     module: {
         loaders: [
+            {
+                test: /\.css$/,
+                loader: 'style-loader'
+            }, {
+                test: /\.css$/,
+                loader: 'css-loader',
+                query: {
+                    modules: false,
+                    localIdentName: '[name]__[local]___[hash:base64:5]'
+                }
+            },
+            {
+                test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/,
+                loader: 'url-loader?limit=1024&name=[name]-[hash:8].[ext]!image-webpack-loader',
+            },
             { 
                 test: /\.jsx?$/, 
                 exclude: /node_modules/, 
