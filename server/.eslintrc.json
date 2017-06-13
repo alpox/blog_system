@@ -1,0 +1,52 @@
+{
+    "extends": [
+        "eslint:all",
+        "plugin:jest/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+        "jest"
+    ],
+    "env": {
+        "node": true,
+        "jest/globals": true
+    },
+    "rules": {
+        "space-before-function-paren": "off",
+        "one-var": "off",
+        "arrow-parens": "off",
+        "func-style": "off",
+        "padded-blocks": "off",
+        "no-magic-numbers": "off",
+        "quote-props": [
+            "error",
+            "as-needed"
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "no-underscore-dangle": [
+            "error",
+            {
+                "allowAfterThis": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "newline-after-var": "off",
+        "newline-before-return": "off",
+        "no-undefined": "off",
+        "id-length": "off",
+        "func-names": "off",
+        "require-await": "off",
+        "camelcase":"warn",
+        "max-len":"warn"
+    }
+}

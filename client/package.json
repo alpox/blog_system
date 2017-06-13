@@ -25,12 +25,6 @@
   },
   "homepage": "https://github.com/alpox/blog_system#readme",
   "dependencies": {
-    "feathers": "^2.1.2",
-    "feathers-authentication": "^1.2.3",
-    "feathers-errors": "^2.8.0",
-    "feathers-hooks": "^2.0.1",
-    "feathers-reactive": "^0.4.1",
-    "feathers-rest": "^1.7.2",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

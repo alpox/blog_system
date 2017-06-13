@@ -5,23 +5,33 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --cache ./**/*.js",
+    "lint:fix": "eslint ./**/*.js",
+    "lint:watch": "nodemon --watch . --exec npm run lint",
+    "test": "jest"
   },
   "author": "Elias Bernhaut",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-flow": "^6.23.0",
     "knex": "^0.13.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-boom": "0.0.4",
+    "koa-passport": "^3.0.0",
     "koa-router": "^7.2.0",
     "pg": "^6.2.3"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-eslint": "^6.1.2",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.5.1",
-    "babel-register": "^6.24.1"
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "flow-bin": "^0.48.0",
+    "jest": "^20.0.4"
   }
 }
